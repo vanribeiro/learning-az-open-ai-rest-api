@@ -1,0 +1,24 @@
+{
+  "name": "learning-az-open-ai-rest-api",
+  "version": "1.0.0",
+  "description": "I'm learning to use Azure Open AI. And, in this repository, my intention is to record how to implement REST api consumption from the documentation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanribeiro/learning-az-open-ai-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanribeiro/learning-az-open-ai-rest-api/issues"
+  },
+  "homepage": "https://github.com/vanribeiro/learning-az-open-ai-rest-api#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

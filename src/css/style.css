@@ -1,6 +1,6 @@
 body, input {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: 1px;
 }
 
@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     height: 65vh;
     overflow-y: auto;
+    font-weight: 300;
 }
 
 .chat__form{
@@ -65,21 +66,33 @@ body{
     display: block;
     font-size: 24px;
     position: relative;
-    top: -8px;
+    top: -4px;
 }
 
-.chat__output__right{
-    text-align: right;
-    place-self: end;
-    width: auto;
+.chat__output__container__text{
+    width: 90%;
+    border: #4f4f4f 1px solid;
+    border-radius: 4px;    
+    margin: 8px;
+    padding: 4px;
+}
+
+.chat__output--right{
     background-color: #3d3d3d;
+    place-self: end;
 }
 
 .chat__output__text{
-    border: #4f4f4f 1px solid;
-    margin: 8px;
-    border-radius: 4px;
-    padding: 8px;
+    margin: inherit;
+    padding: inherit;
+}
+
+.chat__output__container__time{
+    font-size: 10px;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding-right: 16px;
 }
 
 footer{

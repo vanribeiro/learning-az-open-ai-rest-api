@@ -1,7 +1,4 @@
 const promptInput = document.querySelector('.chat__form__prompt');
 const chatOutput = document.querySelector('.chat__output');
-
-export {
-    promptInput,
-    chatOutput
-}
+export { promptInput, chatOutput };
+//# sourceMappingURL=elements.js.map
