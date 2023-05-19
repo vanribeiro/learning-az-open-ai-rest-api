@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chat | <small>Using Azure OpenAI Service REST API</small></h1>
+        </header>
+        <main>
+            <section class="chat__container">
+                <article class="chat__output"></article>
+                <form class="chat__form">
+                    <fieldset class="chat__form__group">
+                        <label for="prompt" hidden>chat prompt input</label>
+                        <input class="chat__form__prompt" type="text" id="prompt" name="prompt" aria-label="chat prompt input">
+                        <button class="chat__form__button" type="submit">
+                            <span class="chat__form__button__icon">&#10146;</span>
+                        </button>
+                    </fieldset>
+                    
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;2023 | vanribeiro.github.io </p>
+        </footer>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
