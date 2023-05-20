@@ -1,0 +1,30 @@
+.alert-strip{
+    margin: 0;
+    width: 100%;
+    padding: 1px 0;
+    text-align: center;
+    height: 50px;
+}
+
+.alert-strip p{
+    color: #fff;
+}
+
+.alert-strip--danger{
+    background-color: #862828;
+    animation: ease-in-out 5s forwards fadeOut;
+}
+
+.alert-strip--sucess{
+    background-color: #3f903f;
+    animation: ease-in-out 5s forwards fadeOut;
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

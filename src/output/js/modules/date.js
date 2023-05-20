@@ -5,8 +5,14 @@ function dateFormat(now) {
     const year = date.getFullYear();
     return `${month < 10 ? `0${month}` : month}/${day}/${year}`;
 }
-function timeFormatHoursMinutes(date) {
-    console.log(date);
+function timeFormatHoursMinutes(now) {
+    const settings = {
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    const date = new Date(now);
+    const time = date.toLocaleTimeString('en-US', settings);
+    return time;
 }
 export { dateFormat, timeFormatHoursMinutes };
 //# sourceMappingURL=date.js.map

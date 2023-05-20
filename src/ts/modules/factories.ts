@@ -22,7 +22,7 @@ function paragraphFactory(text: string, className: string) {
 }
 
 function promptFactory(prompt: string) {
-    const MAX_TOKENS: number = 100;
+    const MAX_TOKENS: number = 300;
     const TEMPERATURE: number = 0;
     const TOP_P: number = 1;
     const PRESENCE_PENALTY: number = 0;

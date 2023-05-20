@@ -1,4 +1,5 @@
-import { chatOutput } from "./elements.js";
+import { dateFormat, timeFormatHoursMinutes } from "./date.js";
+import { chatDate, chatOutput } from "./elements.js";
 import { divFactory, paragraphFactory, spanFactory } from "./factories.js";
 
 function formatOutput (value: string, textAlign: string){
@@ -6,7 +7,7 @@ function formatOutput (value: string, textAlign: string){
     const fragment: DocumentFragment = document.createDocumentFragment();
     const div = divFactory(`chat__output__container__text ${alignment}`).div;
     const p = paragraphFactory(value, 'chat__output__text').p;
-    const span = spanFactory('12:29 PM', 'chat__output__container__time').span;
+    const span = spanFactory(timeFormatHoursMinutes(Date.now()), 'chat__output__container__time').span;
 
     fragment.appendChild(div);
     div.append(p);
@@ -15,6 +16,11 @@ function formatOutput (value: string, textAlign: string){
     chatOutput.append(fragment);
 }
 
+function setTodayDate(now: number) {
+    chatDate.innerText = dateFormat(now);
+}
+
 export {
-    formatOutput
+    formatOutput,
+    setTodayDate
 }

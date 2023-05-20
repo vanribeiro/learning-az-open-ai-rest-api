@@ -10,21 +10,30 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { promptFactory } from "../modules/factories.js";
 import { formatOutput } from "../modules/outputs.js";
 import { DEPLOYMENT, ENDPOINT, KEY } from "./env.js";
+import { isDisconnected } from "../modules/internet-connection.js";
 function fetchApi(prompt) {
     return __awaiter(this, void 0, void 0, function* () {
         const URL = `${ENDPOINT}/openai/deployments/${DEPLOYMENT}/completions?api-version=2023-05-15`;
-        const response = yield fetch(URL, {
-            method: 'POST',
-            body: JSON.stringify(promptFactory(prompt)),
-            headers: {
-                "Content-Type": "application/json",
-                "api-key": `${KEY}`
+        try {
+            const response = yield fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(promptFactory(prompt)),
+                headers: {
+                    "Content-Type": "application/json",
+                    "api-key": `${KEY}`
+                }
+            });
+            const data = yield response.json();
+            const openaiAnswer = data.choices[0].text;
+            formatOutput(openaiAnswer, 'left');
+            return { response, data };
+        }
+        catch (error) {
+            if (error.name.includes('Failed to fetch')) {
+                isDisconnected();
             }
-        });
-        const data = yield response.json();
-        const openaiAnswer = data.choices[0].text;
-        formatOutput(openaiAnswer, 'left');
-        return { response, data };
+            throw error;
+        }
     });
 }
 export { fetchApi };

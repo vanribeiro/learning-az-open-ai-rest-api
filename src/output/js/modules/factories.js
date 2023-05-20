@@ -16,7 +16,7 @@ function paragraphFactory(text, className) {
     return { p };
 }
 function promptFactory(prompt) {
-    const MAX_TOKENS = 100;
+    const MAX_TOKENS = 300;
     const TEMPERATURE = 0;
     const TOP_P = 1;
     const PRESENCE_PENALTY = 0;

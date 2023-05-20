@@ -5,8 +5,13 @@ body, input {
 }
 
 body{
+    margin: 0;
     background-color: #1e1e1e;
     color: #c0c0c0;
+}
+
+header h1, header small{
+    font-weight: 300;
 }
 
 .container{
@@ -17,7 +22,7 @@ body{
 .chat__output{
     border: 1px #4f4f4f solid;
     border-bottom-color: transparent;
-    padding: 16px;
+    padding: 0 24px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     display: flex;
@@ -28,37 +33,49 @@ body{
 }
 
 .chat__form{
+    background-color: #3d3d3d;
     position: relative;
+    border-width: 1px;
+    border-color: #4f4f4f;
 }
 
 .chat__form__group{
     margin: 0;
-    padding: 10px;
-    border-width: 1px;
-    border-color: #4f4f4f;
+    padding: 8px 24px;
+    border-bottom: 1px solid #c0c0c0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
+.chat__form__prompt:focus-visible{
+    border: none;
+    outline: none;
+}
+
+.chat__form__prompt:active,
 .chat__form__prompt{
     position: relative;
     width: 98%;
     height: 24px;
     background-color: transparent;
     border: transparent;
-    border-bottom: 1px solid #c0c0c0;
     color: #c0c0c0;
+    font-size: 16px;
+}
+
+.chat__form__group__container{
+    border-bottom: 1px #c0c0c0 solid;
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .chat__form__button{
     cursor: pointer;
-    position: absolute;
     background-color: transparent;
-    right: 3%;
     height: 30px;
     border: 0;
-    z-index: 1;
-
+    padding: 0;
 }
 
 .chat__form__button__icon{
@@ -87,6 +104,23 @@ body{
     padding: inherit;
 }
 
+.chat__output__date__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.chat__output__date__container hr{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.chat__output__date{
+    font-size: 12px;
+}
+
 .chat__output__container__time{
     font-size: 10px;
     display: block;
@@ -96,6 +130,7 @@ body{
 }
 
 footer{
+    padding-top: 16px;
     font-weight: 300;
     font-size: 14px;
     text-align: center;
