@@ -9,11 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { promptFactory } from "../modules/factories.js";
 import { formatOutput } from "../modules/outputs.js";
-import { DEPLOYMENT, ENDPOINT, KEY } from "./env.js";
+import { ENDPOINT, KEY, TEXT_DA_VINCI_MODEL } from "./env.js";
 import { isDisconnected } from "../modules/internet-connection.js";
 function fetchApi(prompt) {
     return __awaiter(this, void 0, void 0, function* () {
-        const URL = `${ENDPOINT}/openai/deployments/${DEPLOYMENT}/completions?api-version=2023-05-15`;
+        const URL = `${ENDPOINT}/openai/deployments/${TEXT_DA_VINCI_MODEL}/completions?api-version=2023-05-15`;
         try {
             const response = yield fetch(URL, {
                 method: 'POST',

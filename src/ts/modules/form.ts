@@ -6,10 +6,10 @@ const form: HTMLFormElement = document.querySelector('form');
 
 form.addEventListener('submit', async (event: SubmitEvent) => {
     event.preventDefault();
-
-    formatOutput(promptInput.value, 'right');
     
-    await fetchApi(promptInput.value);
-    
+    const value = promptInput.value;
     promptInput.value = '';
+
+    formatOutput(value, 'right');
+    await fetchApi(value);
 });

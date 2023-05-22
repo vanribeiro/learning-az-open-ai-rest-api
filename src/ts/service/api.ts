@@ -1,11 +1,11 @@
 import { promptFactory } from "../modules/factories.js";
 import { formatOutput } from "../modules/outputs.js";
-import { DEPLOYMENT, ENDPOINT, KEY } from "./env.js";
+import { ENDPOINT, KEY, TEXT_DA_VINCI_MODEL } from "./env.js";
 import { isDisconnected } from "../modules/internet-connection.js";
 
 async function fetchApi (prompt: string) {
 
-    const URL = `${ENDPOINT}/openai/deployments/${DEPLOYMENT}/completions?api-version=2023-05-15`;
+    const URL = `${ENDPOINT}/openai/deployments/${TEXT_DA_VINCI_MODEL}/completions?api-version=2023-05-15`;
     
     try {
         
@@ -22,7 +22,7 @@ async function fetchApi (prompt: string) {
         const openaiAnswer = data.choices[0].text;
         
         formatOutput(openaiAnswer, 'left');
-    
+
         return { response, data };
     } catch (error) {
 

@@ -158,5 +158,14 @@ header h1, header small {
     opacity: 0;
   }
 }
+footer {
+  padding-top: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
+footer a {
+  color: inherit;
+}
 
 /*# sourceMappingURL=index.css.map */

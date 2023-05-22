@@ -9,7 +9,7 @@ Purpose: simple chat that accepts user input and returns a response of a maximum
 ## Technologies
 
 - HTML5
-- CSS / SCSS
+- CSS3 / SCSS
 - TypeScript / JavaScript
 - Azure Open AI Service REST API
 - NodeJS

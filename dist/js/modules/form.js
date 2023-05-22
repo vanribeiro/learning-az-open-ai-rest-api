@@ -13,8 +13,9 @@ import { formatOutput } from "./outputs.js";
 const form = document.querySelector('form');
 form.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0, function* () {
     event.preventDefault();
-    formatOutput(promptInput.value, 'right');
-    yield fetchApi(promptInput.value);
+    const value = promptInput.value;
     promptInput.value = '';
+    formatOutput(value, 'right');
+    yield fetchApi(value);
 }));
 //# sourceMappingURL=form.js.map
