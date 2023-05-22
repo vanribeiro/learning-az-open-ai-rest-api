@@ -14,14 +14,17 @@ import { isDisconnected } from "../modules/internet-connection.js";
 function fetchApi(prompt) {
     return __awaiter(this, void 0, void 0, function* () {
         const URL = `${ENDPOINT}?model=${TEXT_DA_VINCI_MODEL}&api-version=2023-05-15`;
+        const options = {
+            method: 'POST',
+            body: JSON.stringify(promptFactory(prompt)),
+            headers: { "Content-Type": "application/json" }
+        };
         try {
-            const response = yield fetch(URL, {
-                method: 'POST',
-                body: JSON.stringify(promptFactory(prompt)),
-                headers: { "Content-Type": "application/json" }
-            });
+            const response = yield fetch(URL, options);
+            if (response.status === 404) {
+                console.error('Resource not fount. Review model, api-version and url.');
+            }
             const data = yield response.json();
-            console.log(data);
             const openaiAnswer = data.choices[0].text;
             formatOutput(openaiAnswer, 'left');
             return { response, data };

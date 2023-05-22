@@ -15,13 +15,17 @@ async function fetchApi (prompt: string) {
     try {
         
         const response: Response = await fetch(URL, options);
+                
+        if(response.status === 404){
+            console.error('Resource not fount. Review model, api-version and url.')
+        }
+        
         const data: any = await response.json();
         const openaiAnswer = data.choices[0].text;
-        
         formatOutput(openaiAnswer, 'left');
-
+        
         return { response, data };
-
+        
     } catch (error) {
 
         if(error.name.includes('Failed to fetch')) {
@@ -31,7 +35,6 @@ async function fetchApi (prompt: string) {
         throw error;
 
     }
-    
 
 } 
 
