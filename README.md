@@ -12,9 +12,10 @@ Purpose: simple chat that accepts user input and returns a response of a maximum
 - CSS3 / SCSS
 - TypeScript / JavaScript
 - Azure Open AI Service REST API
+- Azure Function
 - NodeJS
 
 ## Next steps:
 
-- integrate this application with an Azure Function to store environment variables and consume data securely.
+- add auto-scroll to the chat
 - allow the definition of parameters for chat to be defined via form.

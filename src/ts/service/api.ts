@@ -1,21 +1,18 @@
 import { promptFactory } from "../modules/factories.js";
 import { formatOutput } from "../modules/outputs.js";
-import { ENDPOINT, KEY, TEXT_DA_VINCI_MODEL } from "./env.js";
+import { ENDPOINT, TEXT_DA_VINCI_MODEL } from "./env.js";
 import { isDisconnected } from "../modules/internet-connection.js";
 
 async function fetchApi (prompt: string) {
 
-    const URL = `${ENDPOINT}/openai/deployments/${TEXT_DA_VINCI_MODEL}/completions?api-version=2023-05-15`;
+    const URL = `${ENDPOINT}?model=${TEXT_DA_VINCI_MODEL}&api-version=2023-05-15`;
     
     try {
         
         const response: Response = await fetch(URL, {
             method: 'POST',
             body: JSON.stringify(promptFactory(prompt)),
-            headers: {
-                "Content-Type": "application/json",
-                "api-key": `${KEY}`
-            }
+            headers: { "Content-Type": "application/json" }
         });
     
         const data: any = await response.json();

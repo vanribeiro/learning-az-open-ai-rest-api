@@ -1,9 +1,11 @@
-const KEY = 'fc49f3c0d21c4d379b43bc905b582470';
-const ENDPOINT = 'https://learning-az-open-ai.openai.azure.com';
+const ENDPOINT = 
+    window.location.origin.includes('localhost') 
+        ? 'http://localhost:7071/api/get-az-openai-service' 
+        : 'http://localhost:7071/api/get-az-openai-service';
+
 const TEXT_DA_VINCI_MODEL = 'text-davinci-003';
 
 export {
-    KEY,
     ENDPOINT,
     TEXT_DA_VINCI_MODEL
 }
