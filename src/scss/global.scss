@@ -1,0 +1,21 @@
+body, input {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+body{
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #c0c0c0;
+}
+
+header h1, header small{
+    font-weight: 300;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+

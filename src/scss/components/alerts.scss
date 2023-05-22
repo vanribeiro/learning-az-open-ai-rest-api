@@ -4,11 +4,12 @@
     padding: 1px 0;
     text-align: center;
     height: 50px;
+
+    p{
+        color: #fff;
+    }
 }
 
-.alert-strip p{
-    color: #fff;
-}
 
 .alert-strip--danger{
     background-color: #862828;

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "src/output/js",
+        "outDir": "dist/js",
         "target": "ES6",
         "noImplicitAny": true,
         "removeComments": true,
