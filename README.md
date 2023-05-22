@@ -12,7 +12,7 @@ Purpose: simple chat that accepts user input and returns a response of a maximum
 - CSS3 / SCSS
 - TypeScript / JavaScript
 - Azure Open AI Service REST API
-- Azure Function
+- [Azure Function](https://github.com/vanribeiro/get-azure-open-ai-service)
 - NodeJS
 
 ## Next steps:
