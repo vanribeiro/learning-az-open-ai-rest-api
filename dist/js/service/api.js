@@ -21,6 +21,7 @@ function fetchApi(prompt) {
                 headers: { "Content-Type": "application/json" }
             });
             const data = yield response.json();
+            console.log(data);
             const openaiAnswer = data.choices[0].text;
             formatOutput(openaiAnswer, 'left');
             return { response, data };

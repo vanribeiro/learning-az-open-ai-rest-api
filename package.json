@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/vanribeiro/learning-az-open-ai-rest-api.git"
   },
-  "keywords": ["OpenAI", "Azure OpenAI", "RESTful API"],
+  "keywords": [
+    "OpenAI",
+    "Azure OpenAI",
+    "RESTful API"
+  ],
   "author": "Van Ribeiro",
   "license": "ISC",
   "bugs": {
